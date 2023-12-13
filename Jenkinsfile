@@ -6,8 +6,8 @@ pipeline {
        stage ("Run the script") {
             steps {
                 withAWS(credentials: 'awscredID', region: 'us-east-1'){
-                    sh "pip3 install -r requirements.txt --user"
-                    sh "python3 check_endpoint.py"
+                    sh "sudo pip3 install -r requirements.txt --user"
+                    sh "sudo python3 check_endpoint.py"
                 }
             }
         }
