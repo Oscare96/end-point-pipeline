@@ -1,6 +1,6 @@
 pipeline {
     agent { 
-      docker { image 'python:3.8.16-slim-bullseye' }
+      docker { image 'python:3.8.16-bullseye' }
     }
     stages {
        stage ("Run the script") {
