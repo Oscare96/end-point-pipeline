@@ -29,8 +29,11 @@ def send_mail():
     BODY_TEXT = (f"""
     Hello all,
     Please check the below endpoints as they seem broken
+    
     {url_broke}
     Thanks and best regards !!!
+
+
     DevOps Team 
     Email: {SENDER_EMAIL}
     """)           
