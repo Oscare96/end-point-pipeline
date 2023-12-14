@@ -29,7 +29,7 @@ def send_mail():
     Here is a list of endpoints that are down from the list passed as input: 
     {url_broke}""")           
     CHARSET = "UTF-8"
-    ses_client = boto3.client('ses', region=REGION)
+    ses_client = boto3.client('ses', region_name=REGION)
     try:
         response = ses_client.send_email(
             Destination={
