@@ -3,7 +3,7 @@ import boto3
 from botocore.exceptions import ClientError
 
 url_set = ['https://www.google.com', 'https://www.netflix.com', 'http://uber.net', 'http://upmenu.org', 'https://www.youtube.com']
-
+REGION= "us-east-1"
 url_broke= []
 
 for url in url_set:
@@ -29,7 +29,7 @@ def send_mail():
     Here is a list of endpoints that are down from the list passed as input: 
     {url_broke}""")           
     CHARSET = "UTF-8"
-    ses_client = boto3.client('ses')
+    ses_client = boto3.client('ses', region=REGION)
     try:
         response = ses_client.send_email(
             Destination={
