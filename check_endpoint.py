@@ -27,9 +27,13 @@ def send_mail():
     SENDER = SENDER_EMAIL # "<SET A VERIFIED SENDER EMAIL>"
     SUBJECT = "List of endpoints down"
     BODY_TEXT = (f"""
-    Hello all, 
-    Here is a list of endpoints that are down from the list passed as input: 
-    {url_broke}""")           
+    Hello all,
+    Please check the below endpoints as they seem broken
+    {url_broke}
+    Thanks and best regards !!!
+    DevOps Team 
+    Email: {SENDER_EMAIL}
+    """)           
     CHARSET = "UTF-8"
     ses_client = boto3.client('ses', region_name=REGION)
     try:
