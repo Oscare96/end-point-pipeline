@@ -5,6 +5,8 @@ from botocore.exceptions import ClientError
 url_set = ['https://www.google.com', 'https://www.netflix.com', 'http://uber.net', 'http://upmenu.org', 'https://www.youtube.com']
 REGION= "us-east-1"
 url_broke= []
+SENDER_EMAIL="unixclassd1@gmail.com"
+RECEIVER_EMAIL="estephe.kana@utrains.org"
 
 for url in url_set:
     try:
@@ -20,9 +22,9 @@ for url in url_set:
 
 def send_mail():
     # set a verified email address of dev team
-    RECIPIENT = ["estephe.kana@utrains.org"] # ["<SET A VERIFIED EMAIL OF DEV TEAM>"]
+    RECIPIENT = [RECEIVER_EMAIL] # ["<SET A VERIFIED EMAIL OF DEV TEAM>"]
     # set your verified sender email address
-    SENDER = "kanaestephe@gmail.com" # "<SET A VERIFIED SENDER EMAIL>"
+    SENDER = SENDER_EMAIL # "<SET A VERIFIED SENDER EMAIL>"
     SUBJECT = "List of endpoints down"
     BODY_TEXT = (f"""
     Hello all, 
