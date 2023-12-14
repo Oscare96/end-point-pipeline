@@ -1,20 +1,18 @@
-/*pipeline {
+pipeline {
     agent { 
-      docker { image 'python:3.8.16-bullseye' }
+      docker { image 'python:3.8.16-bullseye' 
+             args '-u root'}
     }
     stages {
        stage ("Run the script") {
             steps {
-                withAWS(credentials: 'awscredID', region: 'us-east-1'){
-                    user('root')
-                    sh "pip3 install -r requirements.txt"
-                    sh "python3 check_endpoint.py"
-                }
+                sh "pip3 install -r requirements.txt"
+                sh "python3 check_endpoint.py"
             }
         }
     }
-}*/
-pipeline {
+}
+/*pipeline {
     agent { 
         docker { image 'python:3.8.16-bullseye' }
     }
@@ -33,4 +31,4 @@ pipeline {
             }
         }
     }
-}
+}*/
