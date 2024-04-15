@@ -10,7 +10,7 @@ RECEIVER_EMAIL="estephe.kana@utrains.org"
 SUBJECT = "List of endpoints down"      
 CHARSET = "UTF-8"
 
-for url in url_set:a
+for url in url_set:
     try:
         response = requests.get(url)
         code = response.status_code
