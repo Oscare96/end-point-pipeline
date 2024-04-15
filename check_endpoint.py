@@ -25,7 +25,7 @@ for url in url_set:
 #function to get all the verified email.
 def get_list_of_verified_emails():
     # Create SES client
-    ses = boto3.client('ses')
+    ses = boto3.client('ses', region_name=REGION)
 
     response = ses.list_verified_email_addresses()
     print(response)
@@ -34,7 +34,7 @@ def get_list_of_verified_emails():
 #function to send verification email.    
 def verify_email(email):
     # Create SES client
-    ses = boto3.client('ses')
+    ses = boto3.client('ses', region_name=REGION)
     
     response = ses.verify_email_identity(
       EmailAddress = email
