@@ -5,8 +5,8 @@ from botocore.exceptions import ClientError
 url_set = ['https://www.google.com', 'https://www.netflix.com', 'http://uber.net', 'http://upmenu.org', 'https://www.youtube.com']
 REGION= "us-west-1"
 url_broke= []
-SENDER_EMAIL="kanaestephe@gmail.com"
-RECEIVER_EMAIL="estephe.kana@utrains.org"
+SENDER_EMAIL="semabiaoscar@gmail.com"
+RECEIVER_EMAIL="ndumuediane@gmail.com"
 SUBJECT = "List of endpoints down"      
 CHARSET = "UTF-8"
 
